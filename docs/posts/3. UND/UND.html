@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Salera, Keen Hart D.">
+<meta name="dcterms.date" content="2024-09-15">
 
-<title>Thesis (Clarete, Clavecillas, Salera, Saligumba)</title>
+<title>Thesis (Clarete, Clavecillas, Salera, Saligumba) - Univariate Normal Distributions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,35 +68,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -128,17 +99,17 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Thesis (Clarete, Clavecillas, Salera, Saligumba)</span>
     </a>
   </div>
@@ -149,7 +120,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -172,242 +143,117 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Thesis (Clarete, Clavecillas, Salera, Saligumba)</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Univariate Normal Distributions</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Definition</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Salera, Keen Hart D. </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 15, 2024</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="Definition">Definition <span class="quarto-category-count">(5)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<section id="historical-background" class="level1">
+<h1>HISTORICAL BACKGROUND</h1>
+<p>Abraham de Moivre, an century statistician and consultant to gamblers, was often called upon to make these lengthy computations. de Moivre noted that when the number of events (coin flips) increased, the shape of the binomial distribution approached a very smooth curve.de Moivre reasoned that if he could find a mathematical expression for this curve, he would be able to solve problems such as finding the probability of or more heads out of coin flips much more easily. This is exactly what he did, and the curve he discovered is now called the “normal curve.”</p>
+<p>One of the first applications of the normal distribution was to the analysis of errors of measurement made in astronomical observations, errors that occurred because of imperfect instruments and imperfect observers. Galileo in the century noted that these errors were symmetric and that small errors occurred more frequently than large errors. This led to several hypothesized distributions of errors, but it was not until the early century that it was discovered that these errors followed a normal distribution. Independently, the mathematicians Adrain in and Gauss in developed the formula for the normal distribution and showed that errors were fit well by this distribution.</p>
+<p>This same distribution had been discovered by Laplace in when he derived the extremely important central limit theorem, the topic of a later section of this chapter. Laplace showed that even if a distribution is not normally distributed, the means of repeated samples from the distribution would be very nearly normally distributed, and that the larger the sample size, the closer the distribution of means would be to a normal distribution.</p>
+<p>Quételet was the first to apply the normal distribution to human characteristics. He noted that characteristics such as height, weight, and strength were normally distributed.</p>
+</section>
+<section id="definitions-and-properties" class="level1">
+<h1>DEFINITIONS AND PROPERTIES</h1>
+<p>The normal distribution is the most important and most widely used distribution in statistics. It is sometimes called the “bell curve,” although the tonal qualities of such a bell would be less than pleasing. It is also called the “Gaussian curve” after the mathematician Karl Friedrich Gauss. Although Gauss played an important role in its history, Abraham de Moivre first discovered the normal distribution.</p>
+<section id="probability-density-function-pdf" class="level2">
+<h2 class="anchored" data-anchor-id="probability-density-function-pdf">Probability Density Function (PDF)</h2>
+<section id="normal-distribution" class="level3">
+<h3 class="anchored" data-anchor-id="normal-distribution">Normal Distribution</h3>
+<p>A random variable X is normally distributed with mean and variance if it has the <strong>probability density function</strong> of X as:</p>
+<p><span class="math display">\[
+f(x; \mu, \sigma^2) = \frac{1}{\sqrt{2\pi\sigma^{2}}}exp{[-\frac{1}{2\sigma^{2}}(x-\mu)^{2}]}
+\]</span> <span class="math display">\[, -\infty &lt; x &lt; \infty , -\infty &lt; \mu &lt; \infty , \sigma &gt; 0 \]</span></p>
+<p>The constants <span class="math inline">\(\mu\)</span>, <span class="math inline">\(\sigma\)</span>, and <span class="math inline">\(\sigma^2\)</span> are, respectively, the mean, standard deviation, and variance of the normal distribution.</p>
+<p>e = natural logarithm <span class="math inline">\(\pi\)</span> = constant pi</p>
+</section>
+<section id="standard-normal-distribution" class="level3">
+<h3 class="anchored" data-anchor-id="standard-normal-distribution">Standard Normal Distribution</h3>
+<p>A normal distribution with a mean of and a standard deviation of is called a standard normal distribution.</p>
+<p>Let F(x;<span class="math inline">\(\mu\)</span>, <span class="math inline">\(\sigma^2\)</span>) denote the cumulative distribution function (cdf) of X.</p>
+<p>The pdf of a standard normal random variable Z is given by</p>
+<p><span class="math display">\[
+\phi(z) = \frac{1}{\sqrt{2\pi}}exp(-\frac{z^{2}}{2})  
+\]</span> <span class="math display">\[ ,  -\infty &lt; z &lt; \infty \]</span></p>
+<p>Let <span class="math inline">\(\Phi(z)\)</span> denote the cdf of z.</p>
+<p>Throughout the book the notation <span class="math inline">\(N(\mu, \sigma^2)\)</span> will denote the <strong>normal distribution</strong> <span class="math inline">\(F(\cdot, \mu, \sigma^2)\)</span> with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^2\)</span>. Also, the notations f, F, <span class="math inline">\(\phi, and \Phi\)</span> are used only in reference to <strong>normal distributions</strong></p>
+</section>
+</section>
+<section id="cumulative-distribution-function-cdf" class="level2">
+<h2 class="anchored" data-anchor-id="cumulative-distribution-function-cdf">Cumulative Distribution Function (CDF)</h2>
+<p>The Cumulative Distribution Function (CDF) of a univariate normal distribution gives the probability that a normally distributed random variable𝑋takes on a value less than or equal to some value 𝑥.</p>
+<section id="normal-distribution-1" class="level3">
+<h3 class="anchored" data-anchor-id="normal-distribution-1">Normal Distribution</h3>
+<p>For a normal distribution with mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\sigma\)</span> the CDF is expressed as:</p>
+<p><span class="math display">\[F(x) = P(X\le x) = \int_{-\infty }^{x}\frac{1}{\sigma\sqrt{2\pi}}exp(-\frac{(t-\mu)^{2}}{2\sigma^{2}})dt\]</span></p>
+</section>
+<section id="standard-normal-distribution-1" class="level3">
+<h3 class="anchored" data-anchor-id="standard-normal-distribution-1">Standard Normal Distribution</h3>
+<p>In the case of the standard normal distribution, where <span class="math inline">\(\mu\)</span> = 0 and <span class="math inline">\(\sigma\)</span>=1 the CDF simplifies to:</p>
+<p><span class="math display">\[\Phi(x) = \int_{-\infty }^{x}\frac{1}{\sqrt{2\pi}}exp(-\frac{t^{2}}{2})dt\]</span></p>
+</section>
+</section>
+<section id="moment-generating-function-mgf" class="level2">
+<h2 class="anchored" data-anchor-id="moment-generating-function-mgf">Moment Generating Function (MGF)</h2>
+<p>The Moment Generating Function (MGF) of a univariate normal distribution provides a way to capture all moments of the distribution. For a random variable 𝑋that follows a normal distribution with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^2\)</span> the MGF is given by</p>
+<p><span class="math display">\[M_{x}(t) = \mathbb{E}[e^{tX}]\]</span></p>
+<p>The MGF for a normal distribution 𝑋∼𝑁(<span class="math inline">\(\mu\)</span>,<span class="math inline">\(\sigma^2\)</span>) is:</p>
+<p><span class="math display">\[M_{x}(t) = exp(\mu t+\frac{\sigma^2 t^2}{2})\]</span></p>
+</section>
+<section id="features" class="level2">
+<h2 class="anchored" data-anchor-id="features">Features</h2>
+<ol type="1">
+<li>Normal distributions are symmetric around their mean</li>
+<li>The mean, median, and mode of a normal distribution are equal.</li>
+<li>The area under the normal curve is equal to .</li>
+<li>Normal distributions are denser in the center and less dense in the tails.</li>
+<li>Normal distributions are defined by two parameters, the mean (<span class="math inline">\(\mu\)</span>) and the standard deviation (<span class="math inline">\(\sigma\)</span>).</li>
+<li>68% of the area of a normal distribution is within one standard deviation of the mean.</li>
+<li>Approximately 95% of the area of a normal distribution is within two standard deviations of the mean.</li>
+</ol>
 
 
+</section>
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="news" data-listing-date-sort="1726329600000" data-listing-file-modified-sort="1726466014761" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="41">
-<div class="thumbnail">
-<p><a href="./posts/1. welcome/welcome.html" class="no-external"></a></p><a href="./posts/1. welcome/welcome.html" class="no-external">
-<p><img src="./posts/1. welcome/image.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/1. welcome/welcome.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/1. welcome/welcome.html" class="no-external">Welcome To Our Thesis Blog</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/1. welcome/welcome.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/1. welcome/welcome.html" class="no-external">Welcome to our Thesis Blog, where we document the progress and contents of our Final requirement for this program: Bachelor of Science in Statistics</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/1. welcome/welcome.html" class="no-external">
-<div class="listing-date">
-Sep 15, 2024
-</div>
-<div class="listing-author">
-Clarete, Clavecillas, Salera, Saligumba
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Definition" data-listing-date-sort="1726329600000" data-listing-file-modified-sort="1726535457235" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="69">
-<div class="thumbnail">
-<p><a href="./posts/2. preliminary concepts/Preliminary Concepts.html" class="no-external"></a></p><a href="./posts/2. preliminary concepts/Preliminary Concepts.html" class="no-external">
-<p><img src="./posts/2. preliminary concepts/image.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/2. preliminary concepts/Preliminary Concepts.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2. preliminary concepts/Preliminary Concepts.html" class="no-external">Preliminary Concepts</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2. preliminary concepts/Preliminary Concepts.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Definition'); return false;">
-Definition
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/2. preliminary concepts/Preliminary Concepts.html" class="no-external">The following concepts included in here are the concepts that will be used in this Thesis Blog.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/2. preliminary concepts/Preliminary Concepts.html" class="no-external">
-<div class="listing-date">
-Sep 15, 2024
-</div>
-<div class="listing-author">
-Clarete, Clavecillas, Salera, Saligumba
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Definition" data-listing-date-sort="1726329600000" data-listing-file-modified-sort="1726535460848" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="743">
-<div class="thumbnail">
-<p><a href="./posts/3. UND/UND.html" class="no-external"></a></p><a href="./posts/3. UND/UND.html" class="no-external">
-<p><img src="./posts/3. UND/image.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/3. UND/UND.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/3. UND/UND.html" class="no-external">Univariate Normal Distributions</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/3. UND/UND.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Definition'); return false;">
-Definition
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/3. UND/UND.html" class="no-external">Abraham de Moivre, an century statistician and consultant to gamblers, was often called upon to make these lengthy computations. de Moivre noted that when the number of…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/3. UND/UND.html" class="no-external">
-<div class="listing-date">
-Sep 15, 2024
-</div>
-<div class="listing-author">
-Salera, Keen Hart D.
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Definition" data-listing-date-sort="1726329600000" data-listing-file-modified-sort="1726554871118" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="360">
-<div class="thumbnail">
-<p><a href="./posts/4. MLE of UND/MLE of UNDs.html" class="no-external"></a></p><a href="./posts/4. MLE of UND/MLE of UNDs.html" class="no-external">
-<p><img src="./posts/4. MLE of UND/UND.jpeg" class="thumbnail-image"></p>
-</a><p><a href="./posts/4. MLE of UND/MLE of UNDs.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/4. MLE of UND/MLE of UNDs.html" class="no-external">Maximum Likelihood Estimations of Univariate Normal Distributions</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/4. MLE of UND/MLE of UNDs.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Definition'); return false;">
-Definition
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/4. MLE of UND/MLE of UNDs.html" class="no-external">Assume that you have a random sample <span class="math inline">\(X_1, ... , X_n\)</span> from a probability distribution with a probability density function (PDF) or probability mass function (PMF) <span class="math inline">\(f(X_i,\…</span><span class="math inline"></span></a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/4. MLE of UND/MLE of UNDs.html" class="no-external">
-<div class="listing-date">
-Sep 15, 2024
-</div>
-<div class="listing-author">
-Clarete, Jack C.
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="Definition" data-listing-date-sort="1726329600000" data-listing-file-modified-sort="1726535470593" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="873">
-<div class="thumbnail">
-<p><a href="./posts/5. Mixture of UND (GMM)/Mixture of UND(GMM).html" class="no-external"></a></p><a href="./posts/5. Mixture of UND (GMM)/Mixture of UND(GMM).html" class="no-external">
-<p><img src="./posts/5. Mixture of UND (GMM)/GMM2.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/5. Mixture of UND (GMM)/Mixture of UND(GMM).html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/5. Mixture of UND (GMM)/Mixture of UND(GMM).html" class="no-external">Mixture of Univariate Normal Distributions (Gaussian Mixture Models)</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/5. Mixture of UND (GMM)/Mixture of UND(GMM).html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Definition'); return false;">
-Definition
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/5. Mixture of UND (GMM)/Mixture of UND(GMM).html" class="no-external">Gaussian Mixtures (Titterington et al., 1985) are ubiquitous probabilistic models for density estimation in machine learning applications.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/5. Mixture of UND (GMM)/Mixture of UND(GMM).html" class="no-external">
-<div class="listing-date">
-Sep 15, 2024
-</div>
-<div class="listing-author">
-Keziah M. Saligumba
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="Definition" data-listing-date-sort="1726329600000" data-listing-file-modified-sort="1726542951093" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="714">
-<div class="thumbnail">
-<p><a href="./posts/6. MLE of Mixture UND/MLE of Mixture UNDs.html" class="no-external"></a></p><a href="./posts/6. MLE of Mixture UND/MLE of Mixture UNDs.html" class="no-external">
-<p><img src="./posts/6. MLE of Mixture UND/image.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/6. MLE of Mixture UND/MLE of Mixture UNDs.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/6. MLE of Mixture UND/MLE of Mixture UNDs.html" class="no-external">Maximum Likelihood Estimation of Mixture Univariate Normal Distributions</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/6. MLE of Mixture UND/MLE of Mixture UNDs.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Definition'); return false;">
-Definition
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/6. MLE of Mixture UND/MLE of Mixture UNDs.html" class="no-external"><strong>MAXIMUM LIKELIHOOD EXTIMATION OF MIXTURE OF UNIVARIATE NORMAL DISTRIBUTION</strong></a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/6. MLE of Mixture UND/MLE of Mixture UNDs.html" class="no-external">
-<div class="listing-date">
-Sep 15, 2024
-</div>
-<div class="listing-author">
-Clavecillas, Pearllyn
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

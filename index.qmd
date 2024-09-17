@@ -1,5 +1,5 @@
 ---
-title: "Thesis (Clarete, Clavecillas, Salera, Saligumba)"
+title: "Thesis-Progress"
 listing:
   contents: posts
   sort: "date desc"

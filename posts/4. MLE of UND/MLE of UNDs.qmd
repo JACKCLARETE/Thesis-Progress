@@ -4,6 +4,7 @@ author: "Clarete, Jack C."
 date: "2024-09-15"
 categories: [Definition]
 image: "UND.jpeg"
+bibliography: references.bib
 ---
 
 ## Steps in Finding the Maximum Likelihood Estimation of a Distribution
