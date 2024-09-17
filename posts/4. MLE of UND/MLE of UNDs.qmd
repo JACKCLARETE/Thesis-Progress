@@ -1,0 +1,75 @@
+---
+title: "Maximum Likelihood Estimations of Univariate Normal Distributions"
+author: "Clarete, Jack C."
+date: "2024-09-15"
+categories: [Definition]
+image: "UND.jpeg"
+---
+
+## Steps in Finding the Maximum Likelihood Estimation of a Distribution
+
+### Step 1: Specify the Likelihood Function
+
+Assume that you have a random sample $X_1, ... , X_n$ from a probability distribution with a probability density function (PDF) or probability mass function (PMF) $f(X_i,\theta)$, where $\theta$ is the parameter (or set of parameters) to be estimated.
+
+The likelihood function $L(\theta)$ is the joint probability (or joint density) of observing the sample data, given the parameter 
+$\theta$. For independent and identically distributed (i.i.d.) data, the likelihood function is the product of the individual densities:
+
+$$
+L(\theta) = \prod_{i=1}^n f(X_i|\theta)
+$$
+
+### Step 2: Log-Likelihood Function
+
+Since the likelihood function is a product, it can be difficult to work with directly. Taking the natural logarithm of the likelihood (called the **log-likelihood**) simplifies things. The log-likelihood function is:
+
+$$
+\ell(\theta) = logL(\theta) = \sum_{i=1}^n f(X_i|\theta)
+$$
+
+### Step 3: Differentiate the Log-Likelihood
+
+To find the MLE, you need to maximize the log-likelihood function with respect to the parameter $\theta$. To do this, take the derivative of the log-likelihood function with respect to $\theta$, and set it equal to zero:
+
+$$
+\frac{d}{d\theta}\ell(\theta) = 0
+$$
+this will give you an equation in $\theta$ 
+
+
+### Step 4: Solve for the Parameter $\theta$
+
+Solve the equation obtained in Step 3 to get the MLE, $\hat{\theta}$. This is the parameter value that maximizes the likelihood of observing the given data
+
+To ensure that the value you found is indeed a maximum, you can take the second derivative of the log-likelihood function with respect to $\theta$ and check if it's negative:
+$$
+\frac{d^2}{d\theta^2}\ell(\theta)<0
+$$
+If the second derivative is negative, you have found a maximum
+
+
+
+## Maximum Likelihood Estimation (MLE) of Normal Distribution
+
+Suppose we have $n$ observations $X_1, ..., X_n$ from a Gaussian (Normal) Distribution with unknown mean $\mu$ and known variance $\sigma^2$. To find the Maximum Likelihood Estimate (MLE) for $\mu$, we find the log-likelihood $\ell(\mu)$ , take the derivative with respect to $\mu$, then set it equal to zero, and solve for $\mu$ .
+
+$$
+L(\mu) = \prod_{i-1}^n \frac{1}{\sigma \sqrt{2\pi}}exp\{\frac{1}{2}(\frac{x-\mu}{\sigma})^2\}
+$$
+
+$$
+\Rightarrow \ell(\mu) = \sum_{i=1}^n [log(\frac{1}{\sqrt{2\pi\sigma^2}})-\frac{(x_i-\mu)^2}{2\sigma^2}]
+$$
+
+$$
+\Rightarrow \frac{d}{d\mu}\ell(\mu) = \sum_{i=1}^n \frac{x_i-\mu}{\sigma^2}
+$$
+
+Setting this equal to zero and solving for $\mu$, we get that $\mu_{MLE} = \frac{1}{n}\sum_{i=1}^nx_i$ .
+
+Note that applying the log function to the likelihood helped us decompose the product and removed the exponential function so that we could easily solve for the MLE.
+
+
+**Acknowledgement:**
+
+**References:** 

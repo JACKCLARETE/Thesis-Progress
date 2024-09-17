@@ -1,0 +1,13 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/1. welcome/welcome.html",
+      "/posts/2. preliminary concepts/Preliminary Concepts.html",
+      "/posts/3. UND/UND.html",
+      "/posts/4. MLE of UND/MLE of UNDs.html",
+      "/posts/5. Mixture of UND (GMM)/Mixture of UND(GMM).html",
+      "/posts/6. MLE of Mixture UND/MLE of Mixture UNDs.html"
+    ]
+  }
+]

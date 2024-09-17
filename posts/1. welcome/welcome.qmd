@@ -1,0 +1,26 @@
+---
+title: "Welcome To Our Thesis Blog"
+author: "Clarete, Clavecillas, Salera, Saligumba"
+date: "2024-09-15"
+categories: [news]
+image: "image.jpg"
+---
+
+Welcome to our Thesis Blog, where we document the progress and contents of our Final requirement for this program: Bachelor of Science in Statistics
+
+We are composed of 4 members, namely:
+
+## 1. Jack Ceriaca Clarete
+
+![](Clarete.png)
+
+## 2. Pearlyn Clavecillas
+
+
+## 3. Keen Hart Demecillo Salera
+
+![](Keen.jpg)
+
+## 4. Keziah Saligumba
+
+![](Keziah.jpg)

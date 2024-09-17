@@ -1,0 +1,35 @@
+---
+title: "Preliminary Concepts"
+author: "Clarete, Clavecillas, Salera, Saligumba"
+date: "2024-09-15"
+categories: [Definition]
+image: "image.jpg"
+---
+
+The following concepts included in here are the concepts that will be used in this Thesis Blog. 
+
+# Concepts: 
+## 1. Parametric Family of Distributions
+The Parametric Family of Distributions are divided into 2 categories: Discrete and Continuous. 
+
+### Discrete Distributions
+
+#### Discrete Uniform Distributions
+#### Bernoulli Distribution
+#### Binomial Distributiion
+####
+
+### Continuous Distributions
+
+#### Uniform Distribution
+#### Normal Distribution
+####
+
+
+## 2. Probability Mass Function (PMF) and Probability Density Function (PDF)
+
+
+## 3. Maximum Likelihood Estimations (MLE)
+
+
+## 4. Estimation Maximization

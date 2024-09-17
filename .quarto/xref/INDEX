@@ -1,0 +1,47 @@
+{
+  "posts/welcome/welcome.qmd": {
+    "welcome.html": "f4862533"
+  },
+  "about.qmd": {
+    "about.html": "3fe97c1a"
+  },
+  "posts/1. UND/UND.qmd": {
+    "UND.html": "0f5cb5b6"
+  },
+  "posts/2. MLE of UND/MLE of UNDs.qmd": {
+    "MLE of UNDs.html": "48599d5e"
+  },
+  "posts/3. Mixture of UND (GMM)/Mixture of UND(GMM).qmd": {
+    "Mixture of UND(GMM).html": "2071c134"
+  },
+  "posts/4. MLE of Mixture UND/MLE of Mixture UNDs.qmd": {
+    "MLE of Mixture UNDs.html": "da1bae7b"
+  },
+  "posts/post-with-code/postwithcode.qmd": {
+    "postwithcode.html": "3b654a14"
+  },
+  "index.qmd": {
+    "index.html": "e7e35778"
+  },
+  "posts/6. MLE of Mixture UND/MLE of Mixture UNDs.qmd": {
+    "MLE of Mixture UNDs.html": "bfebf735"
+  },
+  "posts/1. welcome/welcome.qmd": {
+    "welcome.html": "936e75f9"
+  },
+  "posts/2. preliminary concepts/postwithcode.qmd": {
+    "postwithcode.html": "302c02e2"
+  },
+  "posts/3. UND/UND.qmd": {
+    "UND.html": "bf48e2c8"
+  },
+  "posts/4. MLE of UND/MLE of UNDs.qmd": {
+    "MLE of UNDs.html": "5b6eadeb"
+  },
+  "posts/5. Mixture of UND (GMM)/Mixture of UND(GMM).qmd": {
+    "Mixture of UND(GMM).html": "7c767820"
+  },
+  "posts/2. preliminary concepts/Preliminary Concepts.qmd": {
+    "Preliminary Concepts.html": "fe253b6d"
+  }
+}
