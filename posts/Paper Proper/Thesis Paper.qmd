@@ -1,0 +1,61 @@
+---
+title: "Thesis Proper"
+author: "Clarete, Clavecillas, Salera, Saligumba"
+date: "2024-09-15"
+categories: [Paper]
+image: "image.jpg"
+---
+
+# CHAPTER 1: INTRODUCTION
+
+This chapter provides an overview of **Gaussian Mixture Models (GMMs)**, focusing on their theoretical framework and practical applications. It emphasizes the importance of GMMs in pattern recognition, and in identifying structures within complex datasets. This introduction offers
+valuable insights into how GMMs can be effectively used across various fields by exploring their concepts and application to real-world settings.
+
+## 1.1 Background of the Study
+
+In recent years, machine learning has significantly progressed in its capacity to model intricate data. Numerous approaches have been created, including the Gaussian Mixture Model (GMM), which has been particularly notable for its flexibility and effectiveness in representing various data distributions. The Gaussian Mixture Model (GMM) is a probabilistic model representing a distribution as a combination of multiple Gaussian distributions or components. Each component in the mixture is defined by its mean, covariance, and mixing coefficient. GMM is exceptionally flexible in modeling complex, multimodal data distributions (Carreira-Perpinan, 2000), making them ideal for clustering, density estimation, and pattern recognition applications.
+
+As noted by Titterington et al. (1985), Gaussian Mixture Models are ubiquitous probabilistic model for density estimation in machine learning. For instance, they are crucial in classification, such as handwritten digit recognition, where they model pixel distributions for each digit, ensuring accurate and robust classification. Additionally, GMMs play a significant role in dimensionality reduction techniques such as Generative Topographic Mapping (GTM), enabling visualization of high-dimensional data in lower-dimensional spaces.
+
+Moreover, according to Bishop (2006) and Carreira-Perpinan (2000), GMMs are extensively used in data mining, pattern recognition, machine learning and statistical analysis effectively capture the underlying structure of data by representing different clusters or features through distinct Gaussian components.
+
+The increasing use of GMMs has led to the development of efficient algorithms that not only estimate model parameters but also accurately recognize essential aspects, such as the mixture’s modes (peaks). Identifying these modes can provide more information about the structure of the data and improve model interpretability, especially in complicated multi-modal
+datasets. Current optimization approaches, such as Newton’s Method and Gradient Ascent, are helpful but require additional development for practical use.
+
+## 1.2 Statement of the Problem
+
+[wala pay sulod]
+
+## 1.3 Objectives of the Study
+
+This study aims to comprehensively analyze Gaussian Mixture Models (GMMs) from theoretical and practical perspective. The objectives of the study are as follows:
+
+1. Explore the theoretical properties of Gaussian Mixture Models, including their definitions, properties, and methods for parameter estimation.
+2. Examine the role of the Expectation-Maximization (EM) algorithm in Maximum Likelihood Estimation (MLE) for Gaussian Mixture Model, including its convergence properties, potential limitations, and ways to optimize its performance for large or high-dimensional datasets.
+3. Investigate the application of GMMs in classification problems, pattern recognition, and Generative Topographic Mapping, examining how GMM can contribute to this
+4. Develop an algorithm for efficiently locating a given GMM’s modes
+5. Implement Newton’s Method and Gradient Ascent for mode detection
+6. Utilize the Hessian Matrix to calculate local confidence intervals around
+the modes
+7. Explore the potential of Smart Entropy in enhancing the performance of
+the mode detection algorithm
+
+## 1.4 Significance of the Study
+
+[wala pay sulod]
+
+## 1.5 Scope and Limitation
+
+This study focuses on developing an algorithm for locating modes in Gaussian Mixture Models (GMMs). The theoretical scope will thoroughly examine GMMs, including their definitions, properties, and parameter estimate techniques. The study will additionally look into Maximum Likelihood Estimation and the Expectation-Maximization Algorithm, which are essential for estimating GMM parameters.
+
+In terms of application, the study will primarily focus on two main areas: problems with classification (mainly handwritten digit recognition) and Generative Topographic Mapping for dimension reduction. However, this research is limited by numerous factors:
+
+1. The application examples, such as handwritten digit recognition, will be based on publicly available datasets, particularly those mentioned in (Bishop, 2006, Pattern Recognition and Machine Learning).
+2. The optimization methods investigated (Newton’s Method, Gradient Ascent, etc.) may be computationally expensive, and their performance depends on the computer resources available.
+3. The problem of converging to local optima remains a restriction, particularly in extremely complex or multimodal data sets.
+
+## 1.6 Methodology
+
+[walay sulod] 
+ 
+

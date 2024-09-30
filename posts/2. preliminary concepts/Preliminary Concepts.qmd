@@ -14,17 +14,23 @@ The Parametric Family of Distributions are divided into 2 categories: Discrete a
 
 ### Discrete Distributions
 
-#### Discrete Uniform Distributions
-#### Bernoulli Distribution
-#### Binomial Distributiion
-####
+1. Discrete Uniform Distributions
+2. Bernoulli Distribution
+3. Binomial Distribution
+4. Hypergeometric Distribution 
+5. Poisson Distribution
+6. Geometric Distribution
+7. Negative Binomial Distribution
 
 ### Continuous Distributions
 
-#### Uniform Distribution
-#### Normal Distribution
-####
-
+1. Uniform Distribution
+2. Normal Distribution
+3. Gamma Distribution
+4. Exponential Distribution
+5. Beta Distribution
+6. Cauchy Distribution
+7. Lognormal Distribution
 
 ## 2. Probability Mass Function (PMF) and Probability Density Function (PDF)
 
