@@ -6,36 +6,136 @@ categories: [Definition]
 image: "image.jpg"
 ---
 
-The following concepts included in here are the concepts that will be used in this Thesis Blog. 
+The following concepts included in here are the concepts that will be used in this Thesis Blog.
 
-# Concepts: 
+# Concepts:
+
 ## 1. Parametric Family of Distributions
-The Parametric Family of Distributions are divided into 2 categories: Discrete and Continuous. 
+
+The Parametric Family of Distributions are divided into 2 categories: Discrete and Continuous.
 
 ### Discrete Distributions
 
-1. Discrete Uniform Distributions
-2. Bernoulli Distribution
-3. Binomial Distribution
-4. Hypergeometric Distribution 
-5. Poisson Distribution
-6. Geometric Distribution
-7. Negative Binomial Distribution
+1.  Discrete Uniform Distributions
+2.  Bernoulli Distribution
+3.  Binomial Distribution
+4.  Hypergeometric Distribution
+5.  Poisson Distribution
+6.  Geometric Distribution
+7.  Negative Binomial Distribution
 
 ### Continuous Distributions
 
-1. Uniform Distribution
-2. Normal Distribution
-3. Gamma Distribution
-4. Exponential Distribution
-5. Beta Distribution
-6. Cauchy Distribution
-7. Lognormal Distribution
+1.  Uniform Distribution
+2.  Normal Distribution
+3.  Gamma Distribution
+4.  Exponential Distribution
+5.  Beta Distribution
+6.  Cauchy Distribution
+7.  Lognormal Distribution
+
+------------------------------------------------------------------------
 
 ## 2. Probability Mass Function (PMF) and Probability Density Function (PDF)
 
-
 ## 3. Maximum Likelihood Estimations (MLE)
 
-
 ## 4. Estimation Maximization
+
+## 5. Law Of Total Probability
+
+| The **Law of Total Probability** is a fundamental rule relating marginal probabilities to conditional probabilities. It states that if you have a set of mutually exclusive and exhaustive events, you can compute the probability of another event by summing the conditional probabilities of that event with respect to each of the mutually exclusive events, weighted by the probability of each event. \|
+| Formal Definition Let $B_1,B_2, ..., B_n$ be mutually exclusive and exhaustive events (i.e., one of them must occur), and let $A$ be any event. The Law of Total Probability is expressed as: \|
+| $$                                                                                                                                                                                                                                                                                                                                                                                                                P(A) = \sum_{i=1}^n P(A|B_i)P(B_i)                                                                                                                                                                                                                                                                                                                                                                                $$ \|
+| where: \|
+| - $P(A)$ is the total probability of A. \|
+| - $P(A|B_i)$ is the conditional probability of $A$ given $B_i$. \|
+| - $P(B_i)$ is the probability of $B_i$, where $B_i$ are mutually exclusive events (i.e., $P(B_i \cap B_j) = 0$ for $i \neq j$ \|
+
+## 6. Central Limit Theorem
+
+The Central Limit Theorem (CLT) is a fundamental theorem in statistics that describes the behavior of the sampling distribution of the sample mean. It states that, under certain conditions, the distribution of the sample mean (or sum) of a sufficiently large number of independent random variables will be approximately normally distributed, regardless of the original distribution of the population from which the samples are drawn.
+
+Key Points of the Central Limit Theorem: 1. Independence: The random variables must be independent of each other.
+
+2.  Sample Size: The sample size should be sufficiently large. A common rule of thumb is that a sample size of 30 or more is often considered sufficient for the CLT to hold, although this can vary depending on the original distribution.
+
+3.  **Distribution of the Sample Mean**: if $X_1,X_2,...,X_n$ are independent and identically distributed (i.i.d.) random variables with mean $\mu$ and variance $\sigma^2$, then the sampling distribution of the sample mean $\overline{X}$ (which is the average of the sample) will approach a normal distribution with mean $\mu$ and variance $\frac{\sigma^2}{n}$ as the sample size $n$ increases
+
+Mathematical Representation: If $\overline{X}$ is the sample mean, then the CLT can be mathematically expressed as:
+
+$$
+\sqrt{n}(\frac{\overline{X}-\mu}{\sigma})  \longrightarrow N(0,1)
+$$
+
+Where:
+
+-   $\overline{X}$ is the sample mean
+
+-   $\mu$ is the population mean
+
+-   $\sigma$ is the population standard deviation
+
+-   $N(0,1)$ denotes the standard normal distribution
+
+Importance: The Central Limit Theorem is crucial for many statistical methods and inferential statistics, as it justifies the use of the normal distribution in various applications, including hypothesis testing and confidence interval estimation, even when the original data is not normally distributed. This allows statisticians to make inferences about population parameters based on sample statistics.
+
+------------------------------------------------------------------------
+
+## 7. Bayesian Analysis
+
+**Bayesian** Analysis is a statistical approach that applies Bayes' Theorem to update the probability of a hypothesis as more evidence or information becomes available. Unlike frequentist statistics, which interprets probability as the long-run frequency of events, Bayesian analysis treats probability as a measure of belief or certainty regarding an event or hypothesis.
+
+Key Concepts in Bayesian Analysis: 1. **Bayes' Theorem**: At the core of Bayesian analysis is Bayes' Theorem, which provides a mathematical formula for updating probabilities. It is expressed as: $$
+P(H|E) = \frac{P(E|H) \cdot P(H)}{P(E)}
+$$
+
+Where: - $P(H|E)$ is the posterior probability of the hypothesis $H$ given evidence $E$. - $P(E|H)$ is the likelihood of observing evidence $E$ given that $H$ is true - $P(H)$ is the prior probability of the hypothesis before observing the evidence. - $P(E)$ is the marginal likelihood or the total probability of observing evidence $E$
+
+**Prior Probability**: This represents the initial belief about a hypothesis before any evidence is considered. It is based on previous knowledge or subjective judgment.
+
+**Likelihood**: This measures how likely the observed data is under different hypotheses. It reflects the relationship between the data and the hypothesis.
+
+**Posterior Probability**: This is the updated probability of the hypothesis after incorporating the new evidence. It combines the prior probability and the likelihood of the observed evidence.
+
+**Bayesian Inference**: The process of using Bayes' Theorem to update beliefs based on new evidence. This inference can be applied to various statistical models, allowing for more flexible modeling of uncertainty.
+
+### Advantages of Bayesian Analysis:
+
+-   **Incorporation of Prior Knowledge**: Bayesian methods allow the inclusion of prior knowledge and beliefs, which can improve estimates, especially in cases with limited data.
+
+-   **Interpretability**: The results of Bayesian analysis are often easier to interpret, as they provide probabilities directly associated with hypotheses.
+
+-   **Flexibility**: Bayesian methods can be applied to a wide range of problems and can handle complex models, including hierarchical models and missing data.
+
+------------------------------------------------------------------------
+
+## 8. Sampling Methods
+
+**Sampling methods** are techniques used to select a subset of individuals or items from a larger population for the purpose of statistical analysis. The goal of sampling is to gather information that can be used to make inferences about the entire population without the need to survey every member. Different sampling methods can impact the validity and reliability of the results obtained.
+
+### Common Sampling Methods:
+
+1.  **Probability Sampling**: In probability sampling, every member of the population has a known, non-zero chance of being selected. This approach allows for the generalization of results to the larger population. Common types of probability sampling include:
+
+    -   **Simple Random Sampling**: Each member of the population has an equal chance of being selected. This can be achieved using random number generators or drawing names from a hat.
+
+    -   **Systematic Sampling**: Members are selected at regular intervals from a list. For example, every 10th person on a list may be chosen.
+
+    -   **Stratified Sampling**: The population is divided into distinct subgroups (strata) based on a characteristic (e.g., age, gender), and random samples are taken from each stratum. This ensures representation from all subgroups.
+
+    -   **Cluster Sampling**: The population is divided into clusters (often geographically), and entire clusters are randomly selected. This method is useful when populations are spread out over large areas.
+
+2.  **Non-Probability Sampling**: In non-probability sampling, members are selected based on subjective judgment rather than random selection. This can lead to biases and limits the ability to generalize results to the larger population. Common types include:
+
+    -   **Convenience Sampling**: Members are selected based on their easy availability and accessibility. For example, surveying people at a shopping mall.
+
+    -   **Judgmental Sampling**: The researcher selects members based on their knowledge and judgment about who would be most representative of the population.
+
+    -   **Snowball Sampling**: Existing participants recruit new participants from among their acquaintances. This method is often used in hard-to-reach populations.
+
+    -   **Quota Sampling**: The researcher ensures that certain characteristics are represented in the sample by setting quotas for specific subgroups. However, selection within those groups is not random.
+
+### Importance of Sampling Methods:
+
+Choosing the appropriate sampling method is crucial because it affects the validity and reliability of research findings. Well-designed sampling methods help ensure that the sample accurately represents the population, reducing bias and allowing for more generalizable conclusions. Conversely, poor sampling methods can lead to misleading results and affect the overall quality of the research.

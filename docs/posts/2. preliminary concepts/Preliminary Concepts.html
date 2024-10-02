@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -183,6 +212,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Cauchy Distribution</li>
 <li>Lognormal Distribution</li>
 </ol>
+<hr>
 </section>
 </section>
 <section id="probability-mass-function-pmf-and-probability-density-function-pdf" class="level2">
@@ -193,8 +223,88 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="estimation-maximization" class="level2">
 <h2 class="anchored" data-anchor-id="estimation-maximization">4. Estimation Maximization</h2>
+</section>
+<section id="law-of-total-probability" class="level2">
+<h2 class="anchored" data-anchor-id="law-of-total-probability">5. Law Of Total Probability</h2>
+<div class="line-block">The <strong>Law of Total Probability</strong> is a fundamental rule relating marginal probabilities to conditional probabilities. It states that if you have a set of mutually exclusive and exhaustive events, you can compute the probability of another event by summing the conditional probabilities of that event with respect to each of the mutually exclusive events, weighted by the probability of each event. |<br>
+Formal Definition Let <span class="math inline">\(B_1,B_2, ..., B_n\)</span> be mutually exclusive and exhaustive events (i.e., one of them must occur), and let <span class="math inline">\(A\)</span> be any event. The Law of Total Probability is expressed as: |<br>
+<span class="math display">\[                                                                                                                                                                                                                                                                                                                                                                                                                P(A) = \sum_{i=1}^n P(A|B_i)P(B_i)                                                                                                                                                                                                                                                                                                                                                                                \]</span> |<br>
+where: |<br>
+- <span class="math inline">\(P(A)\)</span> is the total probability of A. |<br>
+- <span class="math inline">\(P(A|B_i)\)</span> is the conditional probability of <span class="math inline">\(A\)</span> given <span class="math inline">\(B_i\)</span>. |<br>
+- <span class="math inline">\(P(B_i)\)</span> is the probability of <span class="math inline">\(B_i\)</span>, where <span class="math inline">\(B_i\)</span> are mutually exclusive events (i.e., <span class="math inline">\(P(B_i \cap B_j) = 0\)</span> for <span class="math inline">\(i \neq j\)</span> |</div>
+</section>
+<section id="central-limit-theorem" class="level2">
+<h2 class="anchored" data-anchor-id="central-limit-theorem">6. Central Limit Theorem</h2>
+<p>The Central Limit Theorem (CLT) is a fundamental theorem in statistics that describes the behavior of the sampling distribution of the sample mean. It states that, under certain conditions, the distribution of the sample mean (or sum) of a sufficiently large number of independent random variables will be approximately normally distributed, regardless of the original distribution of the population from which the samples are drawn.</p>
+<p>Key Points of the Central Limit Theorem: 1. Independence: The random variables must be independent of each other.</p>
+<ol start="2" type="1">
+<li><p>Sample Size: The sample size should be sufficiently large. A common rule of thumb is that a sample size of 30 or more is often considered sufficient for the CLT to hold, although this can vary depending on the original distribution.</p></li>
+<li><p><strong>Distribution of the Sample Mean</strong>: if <span class="math inline">\(X_1,X_2,...,X_n\)</span> are independent and identically distributed (i.i.d.) random variables with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^2\)</span>, then the sampling distribution of the sample mean <span class="math inline">\(\overline{X}\)</span> (which is the average of the sample) will approach a normal distribution with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\frac{\sigma^2}{n}\)</span> as the sample size <span class="math inline">\(n\)</span> increases</p></li>
+</ol>
+<p>Mathematical Representation: If <span class="math inline">\(\overline{X}\)</span> is the sample mean, then the CLT can be mathematically expressed as:</p>
+<p><span class="math display">\[
+\sqrt{n}(\frac{\overline{X}-\mu}{\sigma})  \longrightarrow N(0,1)
+\]</span></p>
+<p>Where:</p>
+<ul>
+<li><p><span class="math inline">\(\overline{X}\)</span> is the sample mean</p></li>
+<li><p><span class="math inline">\(\mu\)</span> is the population mean</p></li>
+<li><p><span class="math inline">\(\sigma\)</span> is the population standard deviation</p></li>
+<li><p><span class="math inline">\(N(0,1)\)</span> denotes the standard normal distribution</p></li>
+</ul>
+<p>Importance: The Central Limit Theorem is crucial for many statistical methods and inferential statistics, as it justifies the use of the normal distribution in various applications, including hypothesis testing and confidence interval estimation, even when the original data is not normally distributed. This allows statisticians to make inferences about population parameters based on sample statistics.</p>
+<hr>
+</section>
+<section id="bayesian-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="bayesian-analysis">7. Bayesian Analysis</h2>
+<p><strong>Bayesian</strong> Analysis is a statistical approach that applies Bayes’ Theorem to update the probability of a hypothesis as more evidence or information becomes available. Unlike frequentist statistics, which interprets probability as the long-run frequency of events, Bayesian analysis treats probability as a measure of belief or certainty regarding an event or hypothesis.</p>
+<p>Key Concepts in Bayesian Analysis: 1. <strong>Bayes’ Theorem</strong>: At the core of Bayesian analysis is Bayes’ Theorem, which provides a mathematical formula for updating probabilities. It is expressed as: <span class="math display">\[
+P(H|E) = \frac{P(E|H) \cdot P(H)}{P(E)}
+\]</span></p>
+<p>Where: - <span class="math inline">\(P(H|E)\)</span> is the posterior probability of the hypothesis <span class="math inline">\(H\)</span> given evidence <span class="math inline">\(E\)</span>. - <span class="math inline">\(P(E|H)\)</span> is the likelihood of observing evidence <span class="math inline">\(E\)</span> given that <span class="math inline">\(H\)</span> is true - <span class="math inline">\(P(H)\)</span> is the prior probability of the hypothesis before observing the evidence. - <span class="math inline">\(P(E)\)</span> is the marginal likelihood or the total probability of observing evidence <span class="math inline">\(E\)</span></p>
+<p><strong>Prior Probability</strong>: This represents the initial belief about a hypothesis before any evidence is considered. It is based on previous knowledge or subjective judgment.</p>
+<p><strong>Likelihood</strong>: This measures how likely the observed data is under different hypotheses. It reflects the relationship between the data and the hypothesis.</p>
+<p><strong>Posterior Probability</strong>: This is the updated probability of the hypothesis after incorporating the new evidence. It combines the prior probability and the likelihood of the observed evidence.</p>
+<p><strong>Bayesian Inference</strong>: The process of using Bayes’ Theorem to update beliefs based on new evidence. This inference can be applied to various statistical models, allowing for more flexible modeling of uncertainty.</p>
+<section id="advantages-of-bayesian-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="advantages-of-bayesian-analysis">Advantages of Bayesian Analysis:</h3>
+<ul>
+<li><p><strong>Incorporation of Prior Knowledge</strong>: Bayesian methods allow the inclusion of prior knowledge and beliefs, which can improve estimates, especially in cases with limited data.</p></li>
+<li><p><strong>Interpretability</strong>: The results of Bayesian analysis are often easier to interpret, as they provide probabilities directly associated with hypotheses.</p></li>
+<li><p><strong>Flexibility</strong>: Bayesian methods can be applied to a wide range of problems and can handle complex models, including hierarchical models and missing data.</p></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="sampling-methods" class="level2">
+<h2 class="anchored" data-anchor-id="sampling-methods">8. Sampling Methods</h2>
+<p><strong>Sampling methods</strong> are techniques used to select a subset of individuals or items from a larger population for the purpose of statistical analysis. The goal of sampling is to gather information that can be used to make inferences about the entire population without the need to survey every member. Different sampling methods can impact the validity and reliability of the results obtained.</p>
+<section id="common-sampling-methods" class="level3">
+<h3 class="anchored" data-anchor-id="common-sampling-methods">Common Sampling Methods:</h3>
+<ol type="1">
+<li><p><strong>Probability Sampling</strong>: In probability sampling, every member of the population has a known, non-zero chance of being selected. This approach allows for the generalization of results to the larger population. Common types of probability sampling include:</p>
+<ul>
+<li><p><strong>Simple Random Sampling</strong>: Each member of the population has an equal chance of being selected. This can be achieved using random number generators or drawing names from a hat.</p></li>
+<li><p><strong>Systematic Sampling</strong>: Members are selected at regular intervals from a list. For example, every 10th person on a list may be chosen.</p></li>
+<li><p><strong>Stratified Sampling</strong>: The population is divided into distinct subgroups (strata) based on a characteristic (e.g., age, gender), and random samples are taken from each stratum. This ensures representation from all subgroups.</p></li>
+<li><p><strong>Cluster Sampling</strong>: The population is divided into clusters (often geographically), and entire clusters are randomly selected. This method is useful when populations are spread out over large areas.</p></li>
+</ul></li>
+<li><p><strong>Non-Probability Sampling</strong>: In non-probability sampling, members are selected based on subjective judgment rather than random selection. This can lead to biases and limits the ability to generalize results to the larger population. Common types include:</p>
+<ul>
+<li><p><strong>Convenience Sampling</strong>: Members are selected based on their easy availability and accessibility. For example, surveying people at a shopping mall.</p></li>
+<li><p><strong>Judgmental Sampling</strong>: The researcher selects members based on their knowledge and judgment about who would be most representative of the population.</p></li>
+<li><p><strong>Snowball Sampling</strong>: Existing participants recruit new participants from among their acquaintances. This method is often used in hard-to-reach populations.</p></li>
+<li><p><strong>Quota Sampling</strong>: The researcher ensures that certain characteristics are represented in the sample by setting quotas for specific subgroups. However, selection within those groups is not random.</p></li>
+</ul></li>
+</ol>
+</section>
+<section id="importance-of-sampling-methods" class="level3">
+<h3 class="anchored" data-anchor-id="importance-of-sampling-methods">Importance of Sampling Methods:</h3>
+<p>Choosing the appropriate sampling method is crucial because it affects the validity and reliability of research findings. Well-designed sampling methods help ensure that the sample accurately represents the population, reducing bias and allowing for more generalizable conclusions. Conversely, poor sampling methods can lead to misleading results and affect the overall quality of the research.</p>
 
 
+</section>
 </section>
 </section>
 
